@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import Sidebar from './Sidebar'
+import FollowBar from './FollowBar'
+// import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="h-screen bg-black">
+        <div className="container h-full mx-auto xl:px-30 max-w-6xl">
+          <div className="grid grid-cols-4 h-full">
+            <Sidebar />
+            <div className="col-span-3 lg:col-span-2 border-x-[1px] border-neutral-800">
+              {children}
+            </div>
+            <FollowBar />
+          </div>
+        </div>
+      </body>
     </html>
   )
 }

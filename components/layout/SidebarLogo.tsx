@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-
 import { BsTwitter } from 'react-icons/bs'
 
 const SidebarLogo = () => {

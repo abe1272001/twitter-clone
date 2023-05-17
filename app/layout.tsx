@@ -1,6 +1,7 @@
 import './globals.css'
 import Layout from '@/components/Layout'
-import Modal from '@/components/Modal'
+import LoginModal from '@/components/modals/LoginModal'
+import RegisterModal from '@/components/modals/RegisterModal'
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -18,8 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LoginModal />
+        <RegisterModal />
         <Layout>{children}</Layout>
-        <Modal isOpen />
       </body>
     </html>
   )
